@@ -9,6 +9,9 @@ import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 
+import com.nelioalves.cursomc.domain.Cliente;
+import com.nelioalves.cursomc.domain.Pedido;
+
 public class SmtpEmailService extends AbstractEmailService{
 
 	@Autowired
@@ -35,6 +38,16 @@ public class SmtpEmailService extends AbstractEmailService{
 		javaMailSender.send(msg);
 		LOG.info("Email Enviado!");
 		
+	}
+
+	@Override
+	public void sendOrderConfirmationHtmlEmail(Pedido obj) {		
+	}
+	
+	@Override
+	public void sendNewPasswordEmail(Cliente cliente, String newPass) {
+		// TODO Auto-generated method stub
+		super.sendNewPasswordEmail(cliente, newPass);
 	}
 
 }

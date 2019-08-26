@@ -22,7 +22,4 @@ public class CredenciaisDTO implements Serializable{
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
-	
-	
 }

@@ -35,7 +35,7 @@ public class S3Service {
 			InputStream is = multiPartFile.getInputStream();
 			String contentType = multiPartFile.getContentType();
 			
-			return uploadFile(fileName, is, contentType);
+			return uploadFile(is, fileName, contentType);
 			
 			
 			
@@ -44,7 +44,7 @@ public class S3Service {
 		}
 	}
 	
-	public URI uploadFile(String fileName, InputStream is, String contentType) {
+	public URI uploadFile(InputStream is, String fileName, String contentType) {
 		try {
 			
 			ObjectMetadata meta = new ObjectMetadata();

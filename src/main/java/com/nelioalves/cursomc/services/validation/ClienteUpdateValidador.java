@@ -46,7 +46,7 @@ public class ClienteUpdateValidador implements ConstraintValidator<ClienteUpdate
 		// inclua os testes aqui, inserindo erros na lista
 		for (FieldMessage e : list) {
 			context.disableDefaultConstraintViolation();
-			context.buildConstraintViolationWithTemplate(e.getMessage()).addPropertyNode(e.getFieldMessage())
+			context.buildConstraintViolationWithTemplate(e.getMessage()).addPropertyNode(e.getFieldName())
 					.addConstraintViolation();
 		}
 		
